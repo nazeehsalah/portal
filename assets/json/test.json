@@ -1,0 +1,143 @@
+[
+  {
+    "sectionName": "Demographic Details",
+    "questions": {
+      "hospital_number": {
+        "text": "Enter Patient’s hospital number ",
+        "show": true,
+        "questionType": "text",
+        "conditionFunction": "return 0;",
+        "answer": ""
+      },
+      "first_name": {
+        "text": "Enter patient’s 1st name ",
+        "show": true,
+        "questionType": "text",
+        "conditionFunction": "return 0;",
+        "answer": ""
+      },
+      "second_name": {
+        "text": "Enter patient’s 2nd name ",
+        "show": true,
+        "questionType": "text",
+        "conditionFunction": "return 0;",
+        "answer": ""
+      },
+      "third_name": {
+        "text": "Enter patient’s 3rd name ",
+        "show": true,
+        "questionType": "text",
+        "conditionFunction": "return 0;",
+        "answer": ""
+      },
+      "patient_sex": {
+        "text": "Enter patient sex ",
+        "show": true,
+        "questionType": "selection",
+        "conditionFunction": "return 0;",
+        "selections": [
+          {
+            "value": "m",
+            "text": "Male"
+          },
+          {
+            "value": "f",
+            "text": "Female"
+          }
+        ],
+        "answer": ""
+      },
+      "paitent_age_months": {
+        "text": "Enter patient’s age in months (If patient ≤ 1 year) ",
+        "show": true,
+        "questionType": "number",
+        "conditionFunction": "return 0;",
+        "answer": ""
+      },
+      "paitent_age_days": {
+        "text": "Enter patient’s age in days (If patient ≤ 1 month) ",
+        "show": true,
+        "questionType": "number",
+        "conditionFunction": "return 0;",
+        "answer": ""
+      },
+      "paitent_age_years": {
+        "text": "Enter patient’s age in years (If patient > 1 year) ",
+        "show": true,
+        "questionType": "number",
+        "conditionFunction": "return 0;",
+        "answer": ""
+      },
+      "patient_birth_weight": {
+        "text": "Enter the patient’s birth weight (If patient ≤ 1 year)",
+        "show": true,
+        "questionType": "selection",
+        "conditionFunction": "return 0;",
+        "selections": [
+          {
+            "value": "1",
+            "text": "1"
+          },
+          {
+            "value": "2",
+            "text": "2"
+          },
+          {
+            "value": "3",
+            "text": "3"
+          },
+          {
+            "value": "4",
+            "text": "4"
+          },
+          {
+            "value": "5",
+            "text": "5"
+          },
+          {
+            "value": "6",
+            "text": "6"
+          },
+          {
+            "value": "7",
+            "text": "7"
+          },
+          {
+            "value": "8",
+            "text": "8"
+          },
+          {
+            "value": "9",
+            "text": "9"
+          },
+          {
+            "value": "10",
+            "text": "10"
+          }
+        ],
+        "answer": ""
+      },
+      "patient_age_type": {
+        "text": "What’s the patient’s age",
+        "show": true,
+        "questionType": "selection",
+        "conditionFunction": "return 0;",
+        "selections": [
+          {
+            "value": "0",
+            "text": "Less month"
+          },
+          {
+            "value": "1",
+            "text": "Age ≤ 1 year"
+          },
+          {
+            "value": "1",
+            "text": "Age > 1 year"
+          }
+        ],
+        "answer": ""
+      }
+    }
+  }
+]

@@ -1,0 +1,82 @@
+ this.ruleBaseEngin = `
+      if(questionObject["patient_age"]?.answer == "Less month"){
+        questionObject["patient_age_dayes"].show=true
+        questionObject["patient_age_months"].show=false
+        questionObject["patient_age_years"].show=false
+        questionObject["patient_birth-weight"].show=true
+      }else if(questionObject["patient_age"]?.answer=="Age ≤ 1 year"){
+        questionObject["patient_age_dayes"].show=false
+        questionObject["patient_age_months"].show=true
+        questionObject["patient_age_years"].show=false
+        questionObject["patient_birth-weight"].show=true
+      }else if(questionObject["patient_age"]?.answer=="Age > 1 year"){
+        questionObject["patient_age_dayes"].show=false
+        questionObject["patient_age_months"].show=false
+        questionObject["patient_age_years"].show=true
+        questionObject["patient_birth-weight"].show=false
+      }
+      if(questionObject["patient_from_where"]?.answer == "Home"){
+        questionObject["ward-name"].show=false
+        questionObject["select_icu"].show=false
+        questionObject["Did patient stay in_previous_hospital"].show=false
+        questionObject["patient_from_where_admission_details"].show=false
+      }else if(questionObject["patient_from_where"]?.answer=="Ward (inside your hospital)"){
+        questionObject["ward-name"].show=true
+        questionObject["select_icu"].show=false
+        questionObject["Did patient stay in_previous_hospital"].show=false
+        questionObject["patient_from_where_admission_details"].show=false
+      }else if(questionObject["patient_from_where"]?.answer=="Another ICU (inside your hospital)"){
+        questionObject["ward-name"].show=false
+        questionObject["select_icu"].show=true
+        questionObject["Did patient stay in_previous_hospital"].show=false
+        questionObject["patient_from_where_admission_details"].show=false
+      }else if(questionObject["patient_from_where"]?.answer=="Another hospital"){
+        questionObject["ward-name"].show=false
+        questionObject["select_icu"].show=false
+        questionObject["Did patient stay in_previous_hospital"].show=true
+        questionObject["patient_from_where_admission_details"].show=false
+      }else if(questionObject["patient_from_where"]?.answer=="Other"){
+        questionObject["ward-name"].show=false
+        questionObject["select_icu"].show=false
+        questionObject["Did patient stay in_previous_hospital"].show=false
+        questionObject["patient_from_where_admission_details"].show=true
+      }
+      if(questionObject["central_venous_line"]?.answer == "yes "){
+        questionObject["date_of_insertion"].show=true
+        questionObject["central_venous_line_removed"].show=false
+      }else if(questionObject["central_venous_line"]?.answer=="No"){
+        questionObject["date_of_insertion"].show=false
+        questionObject["central_venous_line_removed"].show=true
+      }
+      if(questionObject["central_venous_line_removed"]?.answer == "yes"){
+        questionObject["date_of_removal"].show=true
+      }else if(questionObject["central_venous_line_removed"]?.answer == "No"){
+        questionObject["date_of_removal"].show=false
+      }
+      if(questionObject["urinary_catheter_patient"]?.answer == 'yes'){
+        questionObject["urinary_catheter_date_of_insertion"].show=true
+        questionObject["urinary_catheter_removed"].show=false
+      }else if(questionObject["urinary_catheter_patient"]?.answer == 'No'){
+        questionObject["urinary_catheter_date_of_insertion"].show=false
+        questionObject["urinary_catheter_removed"].show=true
+      }
+      if(questionObject["urinary_catheter_removed"]?.answer == "yes "){
+        questionObject["date_of_urinary_catheter_removed"].show=true
+      }else if(questionObject["urinary_catheter_removed"]?.answer == " No"){
+        questionObject["date_of_urinary_catheter_removed"].show=false
+      }
+      if(questionObject["patient _mechanical_ventilator"]?.answer == "yes"){
+        questionObject["date_of_intubation"].show=true
+        questionObject["patient_weaned_from_the_mechanical_ventilator"].show=false
+      }else if(questionObject["patient _mechanical_ventilator"]?.answer == "No"){
+        questionObject["date_of_intubation"].show=false
+        questionObject["patient_weaned_from_the_mechanical_ventilator"].show=true
+      }
+      if(questionObject["patient_weaned_from_the_mechanical_ventilator"]?.answer == "yes"){
+        questionObject["date_of_stopped"].show=true
+      }else if(questionObject["patient_weaned_from_the_mechanical_ventilator"]?.answer == "No"){
+        questionObject["date_of_stopped"].show=false
+      }
+    `
+
+
